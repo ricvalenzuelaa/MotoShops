@@ -1,0 +1,410 @@
+/* --- MASTER STYLESHEET --- */
+
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #222;
+    line-height: 1.6;
+    background-color: #f7f9fb;
+}
+
+a {
+    text-decoration: none;
+    color: #007acc;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Page Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Section Title */
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #007acc;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+/* Header */
+header {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Brand on the left */
+.brand-link {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    line-height: 1.1;
+}
+
+.brand-link .main {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #007acc;
+}
+
+.brand-link .sub {
+    font-size: 1.1rem;
+    color: #555;
+    letter-spacing: 1px;
+}
+
+/* Nav on the right */
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #007acc;
+    transition: color 0.3s ease, transform 0.2s ease;
+    padding: 5px;
+}
+
+.nav-link:hover {
+    color: #005b99;
+    transform: translateY(-2px);
+}
+
+.nav-link-welcome {
+    font-weight: 500;
+    color: #555;
+    margin-right: 15px;
+    font-style: italic;
+}
+
+/* Sign In button style */
+.nav-link.signin {
+    background: #007acc;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav-link.signin:hover {
+    background: #005fa3;
+    color: #fff;
+    transform: translateY(0);
+}
+
+/* Hero section */
+.hero {
+    height: 80vh; /* Adjusted from 85vh */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    background: #333; /* Fallback */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* --- IMPORTANT ---
+       Make sure you have a 'bg-green.jpg' image in your '/images/' folder
+    */
+    background: url("images/bg-green.jpg") center/cover no-repeat;
+    filter: brightness(0.5);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 1.8rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    background: #007acc;
+    color: #fff;
+    padding: 0.9rem 2rem;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-primary:hover {
+    background: #005fa3;
+    transform: translateY(-2px);
+}
+
+/* Product Sorting Form */
+.sort-form {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.sort-form label {
+    font-weight: bold;
+}
+.sort-form select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.sort-form button {
+    background: #007acc;
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.sort-form button:hover {
+    background: #005fa3;
+}
+
+
+/* Product & Info Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px; /* Fixed height for product images */
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h2 {
+    color: #333;
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+}
+.card-content h3 { /* For Brand */
+    font-size: 1.1rem;
+    color: #007acc;
+    margin-bottom: 5px;
+}
+.card-content h4 { /* For Price */
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    margin: 5px 0 10px 0;
+}
+.card-content p {
+    color: #555;
+    font-size: 0.95rem;
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.card-content .btn-primary { /* For Order Now button */
+    margin-top: auto;
+    text-align: center;
+}
+
+/* Form Container (for Login, Register, Settings, etc.) */
+.form-container-boxed {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 40px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-container-boxed h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #007acc;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #007acc;
+    box-shadow: 0 0 5px rgba(0,122,204,0.3);
+}
+
+..form-btn {
+    display: block;
+    width: 100%;
+    background: #007acc;
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: center; /* ADD THIS */
+    margin-bottom: 15px; /* ADD THIS */
+}
+
+.form-btn:hover {
+    background: #005fa3;
+}
+
+.form-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Error/Success Messages */
+.error {
+    color: #D8000C;
+    background: #FFD2D2;
+    padding: 10px 15px;
+    border: 1px solid #D8000C;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.success {
+    color: #4F8A10;
+    background: #DFF2BF;
+    padding: 10px 15px;
+    border: 1px solid #4F8A10;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+
+/* Order Table (My Orders) */
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.order-table th, 
+.order-table td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+.order-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: 600;
+}
+.orderAV.form-btn {
+    display: block;
+    width: 100%;
+    background: #007acc;
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-align: center; /* ADD THIS */
+    margin-bottom: 15px; /* ADD THIS */
+}
