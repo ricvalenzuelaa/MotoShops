@@ -1,6 +1,6 @@
--- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.43, for Win64 (x86_64)
 --
--- Host: localhost    Database: motoshop
+-- Host: localhost    Database: motoshops
 -- ------------------------------------------------------
 -- Server version	9.1.0
 
@@ -160,4 +160,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-10-28 14:05:33
+-- Dump completed on 2025-10-29 14:48:35
