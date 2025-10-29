@@ -6,7 +6,7 @@ session_start();
 $servername = "localhost";
 $username = "root"; // Your MySQL username (default is often 'root')
 $password = "";     // Your MySQL password (default is often empty)
-$dbname = "motoshops";
+$dbname = "motoshop";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

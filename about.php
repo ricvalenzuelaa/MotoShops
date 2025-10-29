@@ -65,13 +65,6 @@ include 'header.php'; // New header
           <p>Reliable performance for riders who demand excellence.</p>
         </div>
       </div>
-      <div class="card">
-        <img src="images/Suzuki-Logo.png" alt="Suzuki" />
-        <div class="card-content">
-          <h2>BMW</h2>
-          <p>Reliable performance for riders who demand excellence.</p>
-        </div>
-      </div>
     </div>
 </section>
 
