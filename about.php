@@ -65,9 +65,17 @@ include 'header.php'; // New header
           <p>Reliable performance for riders who demand excellence.</p>
         </div>
       </div>
+        <div class="card">
+        <img src="images/BMW-Logo.png" alt="BMW" />
+        <div class="card-content">
+          <h2>BMW</h2>
+          <p>Precision, speed, and Italian passion in one machine.</p>
+        </div>
+      </div>
     </div>
 </section>
 
 <?php
 include 'footer.php'; // New footer
+
 ?>
